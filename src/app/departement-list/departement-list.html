@@ -1,0 +1,8 @@
+<title>Les départements</title>
+<ul>
+  @for (departement of departements(); track departement.code){
+    <li>{{departement.code, departement.nom}}</li>
+  } @empty {
+    <li>Aucun département correspond à la recherche</li>
+  }
+</ul>
