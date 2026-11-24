@@ -1,9 +1,13 @@
 <title>Les départements</title>
 
 <ul>
+
   @for (departement of departements(); track departement.code){
-    <li>{{departement.code}} {{departement.nom}}</li>
+    <a [routerLink]="['/departements', departement.code]"><li>{{departement.code}}-{{departement.nom}}</li></a>
+
   } @empty {
     <li>Aucun département correspond à la recherche</li>
   }
 </ul>
+
+

@@ -1,2 +1,10 @@
-<p>Tous les départements</p>
 <title>Les communes du département 17 </title>
+
+<ul>
+@for (commune of communes(); track commune.code){
+  <a [routerLink]="['/communes', commune.code]"><li>{{commune.nom}}</li></a>
+
+} @empty {
+  <li>Aucune commune correspond à la recherche</li>
+}
+</ul>

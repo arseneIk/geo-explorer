@@ -1,9 +1,10 @@
 import { Component, effect, inject, input, signal } from '@angular/core';
 import { Commune } from '../models/commune';
 import { GeoApi } from '../services/geo-api';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [],
+  imports: [RouterLink],
   selector: 'app-commune-list',
   styleUrl: './commune-list.css',
   templateUrl: './commune-list.html',
